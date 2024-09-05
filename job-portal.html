@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<title>Job Portal</title>
+</head>
+<body>
+<style>
+*{margin:0px; padding:0px}
+
+#head{display:flex;
+justify-content:space-between;
+color:black;
+padding:8px 0px 1px 3px;
+text-align:center;
+align-items:center;
+font-family:Sans-serif;}
+
+#head1-options ul li{display:inline-block;
+padding:8px;
+cursor:pointer;
+text-align:center;
+align-items:center;}
+
+#head1-options ul li:hover{background-color:transparent;
+color:red}
+
+#bgi{background-image:url("./i.jpg");
+background-color: aqua;
+background-blend-mode: color-burn;
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+position:relative}
+
+#bgi::before{content: ""!important;
+position:absolute;
+top:0; left:0; right:0; 
+background-color:black;
+}
+
+.co{text-align:center;
+color:black;
+justify-content:center;
+margin-top:50px;}
+
+.co p{font-size:20px;}
+
+.co select{border-radius:8px;
+width:100%;
+padding:6.5px 0px;
+margin:5px}
+
+#imp{text-align:center; 
+display:flex;
+justify-content:center;
+background-color:#e41a2b;}
+
+#imp h1{font-size:19px;
+color:white}
+
+#imp h1 a{color:white;
+text-decoration:none}
+
+#imp img{height:auto; 
+width:30%;
+margin:5px;
+padding:2px;}
+
+.i1:hover{background-color:#b61522}
+.i2:hover{background-color:#b61522}
+.i3:hover{background-color:#b61522}
+.i4:hover{background-color:#b61522}
+.i5:hover{background-color:#b61522}
+.i6:hover{background-color:#b61522}
+
+.button-1 button{color:white;
+background-color:#08135c;
+cursor:pointer;
+border:1px solid #08135c;
+padding:10px;
+padding:8px 25px;
+border-radius:5px;}
+
+.button-1 button:hover{border:1px solid #08135c;
+background-color:white;
+color:#08135c}
+
+.button-1{text-align:start;
+justify-content:start;
+align-items:start}
+
+#to{display:flex;
+margin:25px }
+
+.work{margin:35px 5px}
+
+.im-1 img{border-radius:5%}
+
+#jobs{background-color:#08135c;
+color:white}
+
+.he h1{text-align:center;
+padding:30px 0px 0px 0px}
+
+#we{border:1px solid white;
+width:45%;
+font-size:15px;
+color:white;
+display:flex;
+padding:15px}
+
+.ig{margin-left:8px}
+
+.fe{display:flex;
+justify-content:space-between;
+padding:5px 25px;}
+
+.fej{margin:20px 0px 20px 25px}
+
+#we2{border:1px solid white;
+width:45%;
+font-size:15px;
+color:white;
+display:flex;
+padding:15px}
+
+.he button{background-color:#213092;
+color:white;
+border:1px solid #213092;
+border-radius:5px;
+padding:4px 8.5px;
+margin-left:20px;}
+
+.he{justify-content:end;
+text-align:end;
+align-items:end;}
+
+.Main-Menu{display: none;}
+
+.feb{text-align:center;
+justify-content:center;
+align-items:center;}
+
+.feb button{color:white;
+background-color:red;
+border:1px solid red;
+padding:5.5px 25.5px;
+margin:30px 0px 45px 0px}
+
+.feb button:hover{color:red;
+background-color:transparent}
+
+#item{height:auto;
+text-align:center;
+display:flex;
+flex-wrap:wrap;
+font-size:13px;
+text-align:center;
+justify-content:center;}
+
+.items{height:auto;
+color:white;
+width:28%;
+padding-bottom:10px;
+margin:10px;
+border-radius:10px;
+text-align:start;
+background-color:#08135c;}
+
+#item .items img{width:-webkit-fill-available}
+
+#item .items p{font-size:20px;
+color:white;
+padding:1px 12px}
+
+.ii{color:white;
+padding:0px 12px}
+
+.items h4{padding:15px 0px 0px 12px;
+cursor:pointer;}
+
+.items h5{padding:0px 12px;}
+
+.hh{display:block}
+
+.js{display:flex}
+
+.lo{text-align:center;
+margin:50px 0px 25px 0px;}
+
+.inf{text-align:center;
+justify-content:center;
+align-items:center;
+margin:20px 0px}
+
+.inf button{color:white;
+background-color:#08135c;
+border:1px solid #08135c;
+padding:8px 25px;
+margin:30px 0px 45px 0px}
+
+.inf button:hover{color:#08135c;
+background-color:transparent}
+
+#end{display:flex;
+background-color:#030d47;
+color:white}
+
+.end-menu{margin:15px;}
+
+.end-menu h4:hover i{color:red}
+
+.end-menu h2{font-size:20px}
+
+.end-menu h4{font-size:20px;
+cursor:pointer}
+
+.jobs-menu{margin:15px;
+width:38%}
+
+.jobs-menu h2{font-size:20px}
+
+.jobs-menu h4{font-size:20px;}
+
+#jobs button{padding:5px 20px}
+
+.sl-menu{margin:15px;}
+
+.sl-menu h2{font-size:20px;
+margin-left:5px;}
+
+.sl-menu h4{display:inline-block}
+
+.sl-menu i{margin:1px;
+font-size:20px;
+padding:5px;
+width:28px;
+cursor:pointer;
+text-align:center;
+align-items:center;
+border-radius:50px;
+background-color:white;
+color:#030d47}
+
+.sl-menu i:hover{color:red}
+
+.ne-menu{margin:15px;}
+
+.ne-menu h2{font-size:20px}
+
+.ne-menu input{width:150%;
+padding:3px}
+
+.ne-menu button{padding:5px 35px;
+margin:15px 0px;
+color:white;
+background-color:red;
+border:1px solid red;
+border-radius:8px}
+
+.ne-menu button:hover{color:red;
+background-color:transparent}
+
+#jobs button:hover{background-color:transparent}
+
+.entry{display:flex;
+text-align:center;
+justify-content:center}
+
+.entry input{margin:5px;
+padding:7px 18px 7px 2px;
+border-radius:10px}
+
+.entry select{margin:5px;
+padding:9px 18px 9px 2px;
+border-radius:10px}
+
+.entry button{margin:5px 8px;
+padding:7px 30px;
+color:white;
+background-color:red;
+border-radius:10px;
+border:1px solid red}
+
+.entry button:hover{background-color:transparent;
+color:red;}
+
+.end-menu1{display:flex;
+color:white;
+text-align:center;
+justify-content:center;
+cursor:pointer}
+
+.em1{margin:6px }
+.em2{margin:6px }
+.em3 {margin:6px }
+
+.end-menu1 h4:hover i{color:red}
+
+
+
+
+
+
+@media screen and (max-width:1000px)
+{
+#head1-options{display:none;}
+
+#head{align-items:normal}
+
+.Main-Menu{display: block;}
+
+#btn2{display:none;
+position:absolute;
+right:0;}	
+
+.row{display:block}
+
+#imp{display:block;}
+
+.i1{display:block;
+padding-top: 5px;
+text-align:center;
+justify-content:center;
+align-items:center}
+
+.i6{
+    padding-bottom: 5px;
+}
+
+.vertical-line {
+    width: auto; /* Line ko container ke width ke barabar banane ke liye */
+    height: 3.5px; /* Line ki height set karna */
+    background-color: black; /* Line ka color set karna */
+    margin: 20px 0; /* Line ke upar aur niche spacing set karna */
+}
+#to{display:block;}
+
+.im-1 img {width:-webkit-fill-available}
+
+.fe{display:block;
+padding:0px 25px}
+
+#we{width:-webkit-fill-available;
+margin-bottom:15px;}
+
+#we2{width:-webkit-fill-available;
+margin-bottom:15px;}
+
+#item{display:block}
+
+.items{width:auto;
+display:block}
+
+#end{display:block;
+text-align:center;
+padding:15px 2px}
+
+.jobs-menu{text-align:center;
+width:auto;}
+
+.ne-menu input{width:-webkit-fill-available;}
+
+.entry{display:block}
+
+.entry input{width:-webkit-fill-available}
+.entry select{width:-webkit-fill-available}
+
+.end-menu1{display:block}
+
+#info{display:block;
+width:40%;
+background:transparent;
+position:absolute;
+top:50px;
+right:110px;
+left:110px;
+bottom:0px;}
+
+#imp h1{font-size:30px;
+color:white;}
+
+#imp img{width:260px;}
+
+.co{margin-top:65%;}
+
+}
+
+
+
+
+</style>
+<section id="bgi">
+<section id="head">
+<div class="head-1">
+<h3>Hirevac</h3>
+</div>
+<div class="Main-Menu">
+    <button id="btn1" onclick="Open()"><img src="menu-bar-removebg-preview.png" style=width:20px></button>
+    <button id="btn2" onclick="Close()"><img src="menu-bar-cross.png" style=width:20px></button>
+</div>
+<div id="head1-options">
+<ul id="info">
+<li><b>HOME</b></li>
+<li><b>ABOUT</b></li>
+<li><b>JOBS</b></li>
+<li><b>FREELANCERS</b></li>
+<li><b><i class="fas fa-user"></i> LOGIN</b></li>
+<li><b><i class="fas fa-user"></i> SIGN UP</b></li>
+<li><b><i class="fas fa-search"></i></b></li>
+<ul>
+</div>
+</section>
+
+<div class="co">
+<h1>BUILD YOUR<br>POWERFUL CAREER</h1>
+<p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+</div>
+
+<div class="entry">
+<div class="inp">
+<input placeholder="Keywords">
+</div>
+<div class="loca">
+<select>
+<option>ALL LOCATIONS</option>
+<option>LOCATION 1</option>
+<option>LOCATION 2</option>
+</select>
+</div>
+<div class="loca">
+<select>
+<option>SEO EXPERT</option>
+<option>WEB DESIGNER </option>
+<option>WEB DEVELOPER</option>
+<option>GRAPHIC DESIGNER </option>
+<option>CONTENT WRITER</option>
+</select>
+</div>
+<div class="bb">
+<button>SUBMIT NOW</button>
+</div>
+</div>
+
+<div class="end-menu1">
+<div class="em1">
+<h4><i class="fas fa-stop"></i> Freelancer </h4>
+</div>
+<div class="em2">
+<h4><i class="fas fa-stop"></i> Full Time </h4>
+</div>
+<div class="em3">
+<h4><i class="fas fa-stop"></i> Part Time </h4>
+</div>
+</div>
+
+</section>
+
+<script>
+const infodata =document.getElementById("head1-options")
+const btn1data =document.getElementById("btn1")
+const btn2data =document.getElementById("btn2")
+        
+function Open(){
+infodata.style.display="block"
+btn1data.style.display="none"
+btn2data.style.display="block"
+}
+function Close(){
+infodata.style.display="none"
+btn1data.style.display="block"
+btn2data.style.display="none"
+}
+</script>
+
+<section id="imp">
+
+<div class="i1">
+<a href="https://www.free-css.com/free-css-templates/page294/hirevac"><img src="i1.png"></a>
+<h1><a href="https://www.free-css.com/free-css-templates/page294/hirevac">WEB DESIGN</a></h1>
+</div>
+
+<div class="vertical-line"></div>
+
+<div class="i2">
+<img src="i2.png">
+<h1>WEB DEVELOPMENT</h1>
+</div>
+
+<div class="vertical-line"></div>
+
+<div class="i3">
+<img src="i3.png">
+<h1>GRAPHIC DESIGN</h1>
+</div>
+
+<div class="vertical-line"></div>
+
+<div class="i4">
+<img src="i4.png">
+<h1>SEO MARKETING</h1>
+</div>
+
+<div class="vertical-line"></div>
+
+<div class="i5">
+<img src="i5.png">
+<h1>ACCOUNTING</h1>
+</div>
+
+<div class="vertical-line"></div>
+
+<div class="i6">
+<img src="i6.png">
+<h1>CONTENT WRITING</h1>
+</div>
+</section>
+
+<section id="to">
+<div class="work">
+<div class="topic-1">
+<h1>ABOUT US</h1>
+<p>Normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</p>
+</div>
+<div class="button-1">
+<button>READ MORE</button>
+</div>
+</div>
+<div class="im-1">
+<img src="i2.jpg">
+</div>
+</section>
+
+<section id="jobs">
+<div class="he">
+<h1>RECENT & FEATURED JOBS</h1>
+</div>
+
+<div class="fej">
+<h3>FEATURED JOBS</h3>
+</div>
+<div class="fe">
+
+<section id="we">
+<div class="we-1">
+<img src="2.png">
+</div>
+<div class="ig">
+<h3>Development Team Lead</h3>
+<h4><i class="fas fa-map-marker-alt"></i> Washington. D.C. <i class="fas fa-money-bill-alt"></i> $1200 - $1300</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+
+<section id="we2">
+<div class="we-1">
+<img src="3.png">
+</div>
+<div class="ig">
+<h3>Make my website responsive device compatible</h3>
+<h4><i class="fas fa-map-marker-alt"></i> New York <i class="fas fa-money-bill-alt"></i> $200 - $340</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+</div>
+
+<div class="fej">
+<h3>RECENT JOBS</h3>
+</div>
+<div class="fe">
+
+<section id="we">
+<div class="we-1">
+<img src="4.png">
+</div>
+<div class="ig">
+<h3>Looking Graphic Designer (Logo + UI)</h3>
+<h4><i class="fas fa-map-marker-alt"></i> Washington. D.C. <i class="fas fa-money-bill-alt"></i> $1200/mo</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+
+<section id="we2">
+<div class="we-1">
+<img src="5.png">
+</div>
+<div class="ig">
+<h3>Are you Typography Expert?</h3>
+<h4><i class="fas fa-map-marker-alt"></i> New York <i class="fas fa-money-bill-alt"></i> $56 - $90</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+</div>
+
+<div class="fe">
+
+<section id="we">
+<div class="we-1">
+<img src="6.png">
+</div>
+<div class="ig">
+<h3>Looking WordPress Developer for Theme Forest</h3>
+<h4><i class="fas fa-map-marker-alt"></i> Washington. D.C. <i class="fas fa-money-bill-alt"></i> $400 - $540</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+
+<section id="we2">
+<div class="we-1">
+<img src="7.png">
+</div>
+<div class="ig">
+<h3>Hiring Web Designer for Project</h3>
+<h4><i class="fas fa-map-marker-alt"></i> Washington. D.C. <i class="fas fa-money-bill-alt"></i> $350 - $450</h4>
+<div class="he">
+<i class="far fa-heart"></i>
+<button>Apply Now</button>
+</div>
+</div>
+</section>
+</div>
+
+<div class="feb">
+<button>VIEW ALL</button>
+</div>
+</section>
+
+<div class="lo">
+<h1>LOOKING FOR EXPERTS?</h1>
+<h6>Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.</h6>
+</div>
+
+<section id="item">
+<div class="items">
+<img src="3.jpg"></img><br>
+<h4>Martin Anderson</h4>
+<h5>Web Anaylzer</h5>
+<div class="ii">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+</div>
+<p>Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis.</p>
+</div>
+<div class="items">
+<img src="4.jpg"></img><br>
+<h4>Semanta Klores</h4>
+<h5>Graphic Designer</h5>
+<div class="ii">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+</div>
+<p>Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis.</p>
+</div>
+<div class="items">
+<img src="5.jpg"></img><br>
+<h4>Ryan Martines</h4>
+<h5>SEO Expert</h5>
+<div class="ii">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+</div>
+<p>Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis.</p>
+</div>
+</section>
+<div class="inf">
+<button>VIEW ALL FREELANCERS</button>
+</div>
+
+<section id="end">
+<div class="end-menu">
+<h2>MENU</h2>
+<h4><i class="fas fa-stop"></i> HOME</h4>
+<h4><i class="fas fa-stop"></i> ABOUT</h4>
+<h4><i class="fas fa-stop"></i> JOBS</h4>
+<h4><i class="fas fa-stop"></i> FREELANCERS</h4>
+</div>
+<div class="jobs-menu">
+<h2>JOBS</h2>
+<h4>Established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</h4>
+
+</div>
+<div class="sl-menu">
+<h2>SOCIAL LINKS</h2>
+<h4><a href="https://m.facebook.com/harshitindiangamer?_rdr" target="blank"><i class="fab fa-facebook-f"></i><a></h4>
+<h4><a href="https://www.youtube.com/@HARSHIT_I_GAMER/videos" target="blank"><i class="fab fa-youtube"></i></a></h4>
+<h4><a href="https://web.whatsapp.com/send?phone=919460148897" target="blank"><i class="fab fa-whatsapp"></i></a></h4>
+<h4><a href="https://www.instagram.com/_.harshit_agarwal/?igshid=13exjbejwej0d" target="blank"><i class="fab fa-instagram"></i></a></h4>
+</div>
+<div class="ne-menu">
+<h2>NEWSLETTER</h2>
+<input placeholder="Enter Your Mail">
+<br>
+<button>SUBSCRIBE</button>
+</div>
+
+</section>
+
+</body>
+</html>
